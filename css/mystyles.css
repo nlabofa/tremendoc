@@ -22,9 +22,8 @@ background-color:#009ca9;
 color:white;
 font-weight:bold;
 text-align: center;
-border-radius:5px
 }
-.answer{
+.card-header{
 background-color:black;
 color: #47eabd;
 text-align: center;
@@ -145,30 +144,27 @@ body,
 }
 
 .sidebar .nav i {
-  font-size: 25px;
-  float: left;
-  margin-right: 15px;
+  font-size: 30px;
   line-height: 30px;
   width: 30px;
   text-align: center;
+  margin-right: 12px;
 }
-.sidebar .sidebar-wrapper {
-  position: relative;
-  max-height: none;
-  min-height: 100%;
-  overflow: hidden;
-  width: 130px;
-  z-index: 4;
-  -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-  transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
-}
-.billing{
+.answer-content, .billing-content, .profile-content{
   background-color:#009ca9;
   margin-top:-25px;
   margin-left:-9px;
   height:auto;
+}
+.billing-content{
+  height:900px;
+}
+.border-bottom{
+  border-bottom:1px solid #e2e2e2;
+  margin-top:5px;
+}
+.margin-top{
+  margin-top: 20px;
 }
 .bills{
 background-color:#009ca9;
@@ -179,16 +175,23 @@ border-radius:5px;
 height:45px;
 margin-bottom: 20px;
 }
-.sidebar .sidebar-wrapper .test{
-  //visibility: hidden;
+.sidebar .sidebar-wrapper {
+  position: relative;
+  max-height: none;
+  min-height: 100%;
+  overflow: hidden;
+  //width: 130px;
+  width: 260px;
+  z-index: 4;
+  -webkit-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+  -moz-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+  -o-transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
+  transition: 0.55s cubic-bezier(0.6, 0, 0.4, 1);
 }
-.sidebar .sidebar-wrapper .test:hover{
-//visibility:visible; 
-}
-.sidebar .sidebar-wrapper:hover, .sidebar .sidebar-wrapper:focus{
-  width:260px;
-  transition-duration: .55s;
-} 
+//.sidebar .sidebar-wrapper:hover, .sidebar .sidebar-wrapper:focus{
+ // width:260px;
+ // transition-duration: .55s;
+//} 
 .navbar .collapse ul{
   background-color:#009ca9;
  }
