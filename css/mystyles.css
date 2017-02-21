@@ -23,6 +23,7 @@ color:white;
 font-weight:bold;
 text-align: center;
 }
+
 .card-header{
 background-color:black;
 color: #47eabd;
@@ -150,15 +151,19 @@ body,
   text-align: center;
   margin-right: 12px;
 }
+#font-awesome{
+  color:#009ca9;
+}
+#font-awesome1{
+  color:#888888;
+}
 .answer-content, .billing-content, .profile-content{
   background-color:#009ca9;
   margin-top:-25px;
   margin-left:-9px;
   height:auto;
 }
-.billing-content{
-  height:900px;
-}
+
 .border-bottom{
   border-bottom:1px solid #e2e2e2;
   margin-top:5px;

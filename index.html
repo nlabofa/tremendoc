@@ -34,6 +34,7 @@
                 <li><a href="#"><i class="fa fa-wheelchair-alt" aria-hidden="true"></i><span class="hide-content">Patients</span></a></li>
                 <li><a href="#"><i class="fa fa-user-md" aria-hidden="true"></i><span class="hide-content">Doctors</span></a></li>
                 <li><a href="#"><i class="fa fa-medkit" aria-hidden="true"></i><span class="hide-content">Prescriptions</span></a></li>
+                <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hide-content">Settings</span></a></li>
                 <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i><span class="hide-content">Others</span></a></li>
             </ul>
     	</div>
@@ -283,7 +284,132 @@
 							</div>
 						</div>
 					</div> 
-		  			<div class="col-md-9">
+		  			<div class="col-md-9 overlay-content">
+						<div class="row">
+						    <div class="col-md-10">
+						    	<div class="profile">
+							      <h2>DISCOVER</h2>
+						        </div>
+						    </div>
+						</div>
+						
+						<div class="col-md-5 default-card">
+							<div class="card">
+									<div class="content">
+										<div class="row">
+											<div class="col-md-12">
+											<span style="color:#066d76;font-size:18px;font-weight: bold;">What are your health goals?</span><br><br>
+											<span style="font-size:14px;font-weight: bold;color:#066d76;">Find doctor-created checklists<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;Add to your profile<br>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feel good :)</span>
+											</div>   						
+										</div>						
+									</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<i class="fa fa-search" aria-hidden="true" id="font-awesome1"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#888888;">Find a goal(ex. Lose weight)</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 0px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<i class="fa fa-hourglass-start" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Living Healthier</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 0px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<i class="fa fa-bed" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Parenting and Pregnancy</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 0px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<i class="fa fa-blind" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Growing Older</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 0px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<i class="fa fa-heart" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Managing a condition</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5" style="margin-top:80px;">
+							<div class="card">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:18px;">Suggested goals for you.</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:16px;">Living with Seizures</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:16px;">Living Healthier</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:16px;">Parenting and Pregnancy</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:16px;">Growing Older</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+							<div class="card" style="margin-bottom: 20px;">
+								<div class="content">
+									<div class="row">
+										<div class="col-md-12">
+										<span style="color:#066d76;font-size:16px;">Managing a condition</span>
+										</div>   						
+									</div>						
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9 blur">
 						<div class="row">
 						    <div class="col-md-10">
 						    	<div class="profile">
@@ -418,60 +544,10 @@
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script> 
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-foggy.min.js"></script>
+<script src="assets/js/main.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
 
-	$(".sidebar").css("width","100");
-	$(".answer-content, .billing-content, .profile-content, .hide-content").hide();
-   $(".fake-width").show();
-
-	$(".sidebar").hover(function(){
-	    $(".sidebar").animate({width: '260px'});
-	    $(".hide-content").show();
-	},
-	function(){
-	    $(".sidebar").animate({width: '100px'});
-	    $(".hide-content").hide();
-	});
-	//$('.nav li a').click(function() {
-	//$(".sidebar").css("color","green");
-   //})
-   $('#btn-profile').on('click', function() {
-  	 $(".fake-width").hide();
-    $('.profile-content').animate({
-        'width': 'toggle'
-    });
-     $(".billing-content, .answer-content").hide();
-    });
-
-   $('#btn-answer').on('click', function() {
-  	 $(".fake-width").hide();
-    $('.answer-content').animate({
-        'width': 'toggle'
-    });
-     $(".billing-content, .profile-content").hide();
-    });
-
-   $('#btn-billing').on('click', function() {
-  	 $(".fake-width").hide();
-    $('.billing-content').animate({
-        'width': 'toggle'
-    });
-     $(".answer-content, .profile-content").hide();
-    });
- 
-
-   $('.nav li a').click(function(e) {
-
-        $('.nav li').removeClass('active');
-
-        var $parent = $(this).parent();
-        if (!$parent.hasClass('active')) {
-            $parent.addClass('active');
-        }
-        e.preventDefault();
-    });  
- });
 </script>
 </body>
 </html>
