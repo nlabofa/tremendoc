@@ -33,6 +33,7 @@ $(".sidebar").hover(function(){
 
 $(function () {
 	$('#btn-profile').click( function() {
+        $(".answer-content, .billing-content").hide();
 		if( $(".profile-content, .blur").is(":hidden")){
 			$(".fake-width, .overlay-content").hide();
 			$('.blur').foggy({
@@ -51,6 +52,7 @@ $(function () {
 	});
 
 	$('#btn-answer').click( function() {
+        $(".profile-content, .billing-content").hide();
         if( $(".answer-content, .blur").is(":hidden")){
             $(".fake-width, .overlay-content").hide();
             $('.blur').foggy({
@@ -69,6 +71,7 @@ $(function () {
     });
 
 	$('#btn-billing').click( function() {
+        $(".answer-content, .profile-content").hide();
         if( $(".billing-content, .blur").is(":hidden")){
             $(".fake-width, .overlay-content").hide();
             $('.blur').foggy({
