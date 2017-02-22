@@ -1,9 +1,12 @@
 /*animation and transitions for the DOM STARTS here */
 
+
+/*default actions when the DOM loads */
 $(".sidebar").css("width","100");
 $(".answer-content, .billing-content, .profile-content, .hide-content, .blur").hide();
 
 
+/*transitions for the sidebar hover */
 $(".sidebar").hover(function(){
 
     $(".sidebar").stop().animate({width: '260px'});
@@ -25,11 +28,7 @@ $(".sidebar").hover(function(){
     }  
 });
   
-
-//$('.nav li a').click(function() {
-//$(".sidebar").css("color","green");
-//})
-
+/*transitions when sidebar link is clicked */
 
 $(function () {
 	$('#btn-profile').click( function() {
@@ -91,7 +90,7 @@ $(function () {
 
 });
 
-
+/* setting the active class depending on the link clicked */
 $('.nav li a').click(function(e) {
 
     $('.nav li').removeClass('active');
@@ -101,4 +100,6 @@ $('.nav li a').click(function(e) {
         $parent.addClass('active');
     }
     e.preventDefault();
-});    /*animation and transitions for the DOM ENDS here */
+});  
+
+  /*animation and transitions for the DOM ENDS*/
