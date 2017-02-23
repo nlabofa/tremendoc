@@ -2,10 +2,13 @@
 /*main styling */
 body{
   background: rgba(203, 203, 210, 0.15);
-  overflow:hidden;
+  //overflow:hidden;
 }
 .sidebar-wrapper{
 background-color: #009ca9;
+ }
+ .overlay-content{
+ margin-top: 62px;
  }
 .btn-user{
   padding: 5px;
@@ -188,19 +191,19 @@ body,
   background-color:#009ca9;
  }
  .navbar .collapse li > a{
-  color: #FFFFFF;
+ color: #FFFFFF;
   margin: 5px 15px;
   opacity: .86;
   border-radius: 4px;
-  font-size:20px;
-  text-align:center;
+  background:transparent;
  }
  .navbar .collapse li:hover > a {
-   background: rgba(255, 255, 255, 0.13);
+    color: #FFFFFF;
   opacity: 1;
+  background: rgba(255, 255, 255, 0.23);
  }
  .navbar .collapse li:active > a {
-  color: #FFFFFF;
+   color: #FFFFFF;
   opacity: 1;
   background: rgba(255, 255, 255, 0.23);
 }
@@ -262,6 +265,7 @@ body,
 }
 #main-nav{
   margin-left:100px;
+  margin-bottom:-150px;
 }
 
 
@@ -277,5 +281,13 @@ body,
   }
   #main-nav{
     margin-left:0px;
+    margin-bottom:0px;
+  }
+  .overlay-content{
+    margin-left:0px;
+    margin-top:0px;
+  }
+  .profile-content, .answer-content, .billing-content{
+    background-color: inherit;
   }
 }
