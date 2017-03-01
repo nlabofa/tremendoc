@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     <!-- CSS Files -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
@@ -30,12 +31,11 @@
             <ul class="nav navbar-collapse collapse">
                 <li id="btn-profile"><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i><span class="hide-content">Profile</span></a></li>
                 <li id="btn-answer"><a href=""><i class="fa fa-check-square-o" aria-hidden="true"></i><span class="hide-content">Answers</span></a></li>     
-                <li id="btn-billing"><a href=""><i class="fa fa-credit-card-alt" aria-hidden="true"></i><span class="hide-content">Billing</span></a></li>
-                <li><a href="#"><i class="fa fa-wheelchair-alt" aria-hidden="true"></i><span class="hide-content">Patients</span></a></li>
-                <li><a href="#"><i class="fa fa-user-md" aria-hidden="true"></i><span class="hide-content">Doctors</span></a></li>
-                <li><a href="#"><i class="fa fa-medkit" aria-hidden="true"></i><span class="hide-content">Prescriptions</span></a></li>
+                <li id="btn-billing"><a href=""><i class="fa fa-users" aria-hidden="true"></i><span class="hide-content">Add Profile</span></a></li>
+                <li><a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i><span class="hide-content">Invite Friends</span></a></li>
+                <li><a href="#"><i class="fa fa-user-md" aria-hidden="true"></i><span class="hide-content">Consults</span></a></li>
                 <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hide-content">Settings</span></a></li>
-                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i><span class="hide-content">Others</span></a></li>
+                <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hide-content">Log-Out</span></a></li>
             </ul>
     	</div>
     </div>
@@ -69,39 +69,40 @@
 	  	<div class="container-fluid">
 	  		<div class="row">
 	  		   <div class="col-md-1 fake-width"></div>
-	  		   <div class="col-md-3 profile-content">
+	  		   <div class="col-md-3 col-sm-10 col-xs-10 profile-content">
 					<div class="card">
 						<div class="content margin-top">
 							<form>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" class="form-control" placeholder="FirstName">
+                                    <label>FirstName</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" class="form-control" placeholder="LastName">
+                                    <label>LastName</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>  
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Gender</label>
                                     <select class="form-control">
-                                        <option disabled="" selected="">- Male -</option>
+                                        <option disabled="" selected="">-- --</option>
+                                        <option>Male</option>
                                         <option>Female</option>
                                 	</select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Date Of Birth</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="date-picker">
                                 </div>
                             </div>
                         </div>
@@ -110,29 +111,29 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Address</label>
-                                    <input type="text" class="form-control" placeholder="Home Address">
+                                    <label>Home Address</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>City</label>
                                     <select class="form-control">
-                                        <option disabled="" selected="">- Lagos -</option>
-                                        <option>Kaduna</option>
+                                        <option disabled="" selected="">- -</option>
+                                        <option>Lagos</option>
                                         <option>Abuja </option>
                                         <option>Adamawa</option>
                                 	</select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Country</label>
                                     <select class="form-control">
-                                        <option disabled="" selected="">- Country -</option>
+                                        <option disabled="" selected="">- -</option>
                                         <option>Nigeria</option>
                                         <option>Ghana </option>
                                         <option>America</option>
@@ -140,23 +141,6 @@
                                 </div>
                             </div>
                         </div>
-
-                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Height</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Weight</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -172,7 +156,7 @@
 						</div>
 					</div>
 			   </div> 
-	  		   <div class="col-md-3 answer-content">
+	  		   <div class="col-md-3 col-sm-10 col-xs-10 answer-content">
 	     		    <div class="card">
 						<div class="content border-bottom margin-top">
 							<div class="row">
@@ -224,7 +208,7 @@
 						</div>
 					</div>
 			   </div>
-	           <div class="col-md-3 billing-content">
+	           <div class="col-md-3 col-sm-10 col-xs-10 billing-content">
 					<div class="card">
 						<div class="content margin-top">
 							<form>
@@ -284,7 +268,7 @@
 						</div>
 					</div>
 			   </div> 
-	  		   <div class="col-md-9 overlay-content">
+	  		   <div class="col-md-9 col-sm-9 col-xs-9 overlay-content">
 					<div class="row">
 					    <div class="col-md-10">
 					    	<div class="profile">
@@ -420,6 +404,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script> 
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-foggy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/main.js"></script>
 <script type="text/javascript">
 

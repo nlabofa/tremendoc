@@ -9,6 +9,9 @@ background-color: #009ca9;
  }
  .overlay-content{
  margin-top: 62px;
+ margin-left:100px;
+ z-index:-1;
+ position:absolute;
  }
 .btn-user{
   padding: 5px;
@@ -284,10 +287,21 @@ body,
     margin-bottom:0px;
   }
   .overlay-content{
-    margin-left:0px;
+    margin-left:50px;
     margin-top:0px;
   }
   .profile-content, .answer-content, .billing-content{
     background-color: inherit;
+    margin-left:50px;
   }
 }
+@media (max-width: 500px) {
+    .overlay-content{
+    margin-left:30px;
+    margin-top:0px;
+  }
+  .profile-content, .answer-content, .billing-content{
+    background-color: inherit;
+    margin-left:20px;
+  }
+    }
