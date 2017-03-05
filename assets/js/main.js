@@ -7,6 +7,7 @@ $('#date-picker').datepicker();
 
 $(".sidebar").css("width", "100");
 $(".answer-content, .billing-content, .profile-content, .hide-content").hide();
+$(".ask-dr-main, .chat-content").hide();
 
 
 /*transitions for the sidebar hover */
@@ -93,6 +94,7 @@ $(function() {
 
 });
 
+
 /*transitions for mobile-view when clicked */
 
 $(function() {
@@ -160,6 +162,18 @@ $(window).on('resize', function(event) {
 
     }
 });
+
+/* answers page transitions */
+
+$("#speak-dr").click(function() {
+    $(".ask-dr").fadeOut();
+    $(".ask-dr-main").fadeIn();
+});
+$("#dr-chat").click(function() {
+    $(".ask-dr-main").fadeOut();
+    $(".chat-content").fadeIn();
+});
+
 
 /* setting the active class on the sidebar depending on the link clicked */
 $('.nav li a').click(function(e) {
