@@ -6,7 +6,7 @@ $('#date-picker').datepicker();
 
 
 $(".sidebar").css("width", "100");
-$(".answer-content, .billing-content, .profile-content, .hide-content").hide();
+$(".answer-content, .billing-content, .profile-content, .invite-content, .hide-content, .settings-content").hide();
 $(".ask-dr-main, .chat-content").hide();
 
 
@@ -25,7 +25,7 @@ $(".sidebar").hover(function() {
         });
         $(".hide-content").hide();
         //$('.nav li').removeClass('active');
-        if ($(".profile-content").is(":visible") || $(".answer-content").is(":visible") || $(".billing-content").is(":visible")) {
+        if ($(".profile-content").is(":visible") || $(".answer-content").is(":visible") || $(".billing-content").is(":visible") || $(".invite-content").is(":visible") || $(".settings-content").is(":visible")) {
             $(".sidebar").stop().width('260');
             $(".hide-content").show();
         } else {
@@ -39,7 +39,7 @@ $(".sidebar").hover(function() {
 
 $(function() {
     $('#btn-profile').click(function() {
-        $(".answer-content, .billing-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
         if ($(".profile-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -57,7 +57,7 @@ $(function() {
     });
 
     $('#btn-answer').click(function() {
-        $(".profile-content, .billing-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
         if ($(".answer-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -75,7 +75,7 @@ $(function() {
     });
 
     $('#btn-billing').click(function() {
-        $(".answer-content, .profile-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .profile-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
         if ($(".billing-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -92,6 +92,41 @@ $(function() {
 
     });
 
+    $('#btn-invite').click(function() {
+        $(".profile-content, .billing-content, .answer-content, .settings-content, .fake-width, .overlay-content").hide();
+        if ($(".invite-content").is(":hidden")) {
+            $('.overlay-content').foggy({
+                opacity: 1.5,
+            });
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+            $(".overlay-content").show();
+        } else {
+            $('.overlay-content').css('filter', 'unset').show();
+            $(".invite-content").hide();
+            $(".fake-width").show();
+        }
+
+    });
+    $('#btn-settings').click(function() {
+        $(".profile-content, .billing-content, .answer-content, .invite-content, .fake-width, .overlay-content").hide();
+        if ($(".settings-content").is(":hidden")) {
+            $('.overlay-content').foggy({
+                opacity: 1.5,
+            });
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+            $(".overlay-content").show();
+        } else {
+            $('.overlay-content').css('filter', 'unset').show();
+            $(".settings-content").hide();
+            $(".fake-width").show();
+        }
+
+    });
+
 });
 
 
@@ -99,7 +134,7 @@ $(function() {
 
 $(function() {
     $('#btn-mobile-profile').click(function() {
-        $(".answer-content, .billing-content").hide();
+        $(".answer-content, .billing-content, .invite-content, .settings-content").hide();
         if ($(".profile-content").is(":hidden")) {
             $(".overlay-content").hide();
 
@@ -115,7 +150,7 @@ $(function() {
     });
 
     $('#btn-mobile-answers').click(function() {
-        $(".profile-content, .billing-content").hide();
+        $(".profile-content, .billing-content, .invite-content, .settings-content").hide();
         if ($(".answer-content").is(":hidden")) {
             $(".overlay-content").hide();
 
@@ -130,7 +165,7 @@ $(function() {
     });
 
     $('#btn-mobile-billing').click(function() {
-        $(".profile-content, .answer-content").hide();
+        $(".profile-content, .answer-content, .invite-content, .settings-content").hide();
         if ($(".billing-content").is(":hidden")) {
             $(".overlay-content").hide();
 
@@ -144,6 +179,36 @@ $(function() {
 
     });
 
+    $('#btn-mobile-invite').click(function() {
+        $(".profile-content, .answer-content, .billing-content, .settings-content").hide();
+        if ($(".invite-content").is(":hidden")) {
+            $(".overlay-content").hide();
+
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+        } else {
+            $(".invite-content").hide();
+            $(".overlay-content").fadeIn();
+        }
+
+    });
+
+    $('#btn-mobile-settings').click(function() {
+        $(".profile-content, .answer-content, .billing-content, .invite-content").hide();
+        if ($(".settings-content").is(":hidden")) {
+            $(".overlay-content").hide();
+
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+        } else {
+            $(".settings-content").hide();
+            $(".overlay-content").fadeIn();
+        }
+
+    });
+
 });
 
 /* browser resize and mobile responsiveness */
@@ -151,12 +216,12 @@ $(function() {
 $(window).on('resize', function(event) {
     var windowSize = $(window).width();
     //when a user on a mobile view clicks on a link and resizes to web view, we want to hide the mobile view and switch to web view
-    if (windowSize > 960 && $(".profile-content, .answer-content, .billing-content").is(":visible")) {
-        $(".profile-content, .answer-content, .billing-content").hide();
+    if (windowSize > 960 && $(".profile-content, .answer-content, .billing-content, .invite-content, .settings-content").is(":visible")) {
+        $(".profile-content, .answer-content, .billing-content, .invite-content, .settings-content").hide();
         $(".overlay-content").css('filter', 'unset').fadeIn();
     }
     //when a user on a web view clicks on a link and resizes to mobile view. we want to hide the overlay-content and switch to mobile view.
-    else if (windowSize < 960 && $(".profile-content,.answer-content,.billing-content").is(":visible") && $(".overlay-content").is(":visible")) {
+    else if (windowSize < 960 && $(".profile-content,.answer-content,.billing-content, .invite-content, .settings-content").is(":visible") && $(".overlay-content").is(":visible")) {
         $(".overlay-content").hide();
     } else {
 

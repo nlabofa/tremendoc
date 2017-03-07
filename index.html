@@ -21,7 +21,7 @@
 	<div class="sidebar">
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a hrsef="#">
+                <a href="#">
                   <img src="assets/img/profile.png" alt="profile" class="img-responsive" style="padding-left: 40px;height:55px;">
                 </a>
                 <span class="hide-content" style="text-align: center;"><h4>Hi Opeyemi! Howdy!</h4></span>
@@ -31,10 +31,9 @@
             <ul class="nav navbar-collapse collapse">
                 <li id="btn-profile"><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i><span class="hide-content">Profile</span></a></li>
                 <li id="btn-answer"><a href=""><i class="fa fa-check-square-o" aria-hidden="true"></i><span class="hide-content">Answers</span></a></li>     
-                <li id="btn-billing"><a href=""><i class="fa fa-users" aria-hidden="true"></i><span class="hide-content">Add Profile</span></a></li>
-                <li><a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i><span class="hide-content">Invite Friends</span></a></li>
-                <li><a href="#"><i class="fa fa-user-md" aria-hidden="true"></i><span class="hide-content">Consults</span></a></li>
-                <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i><span class="hide-content">Settings</span></a></li>
+                <li id="btn-billing"><a href=""><i class="fa fa-credit-card" aria-hidden="true"></i><span class="hide-content">Add Card</span></a></li>
+                <li id="btn-invite"><a href=""><i class="fa fa-plus-square-o" aria-hidden="true"></i><span class="hide-content">Invite Friends</span></a></li>
+                <li id="btn-settings"><a href=""><i class="fa fa-wrench" aria-hidden="true"></i><span class="hide-content">Settings</span></a></li>
                 <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i><span class="hide-content">Log-Out</span></a></li>
             </ul>
     	</div>
@@ -58,7 +57,8 @@
 		            <li><a href="#" id="btn-mobile-profile">Profile</a></li>
 		            <li><a href="#" id="btn-mobile-answers">Answers</a></li>
 		            <li><a href="#" id="btn-mobile-billing">Billing</a></li>
-		            <li><a href="#" id="#">Prescriptions</a></li>
+		            <li><a href="#" id="btn-mobile-invite">Invite Friends</a></li>
+		            <li><a href="#" id="btn-mobile-settings">Settings</a></li>
 	            </ul>
 	        </div>
 		</div>
@@ -238,6 +238,172 @@
 						</div>
 					</div>
 			   </div> 
+			   <div class="col-md-3 col-sm-10 col-xs-10 invite-content">
+	     		    <div class="card">
+						<div class="content margin-top">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12 invite-redirect">
+									<div class="modal-header" style="background: url(assets/img/referral-header.png) no-repeat top center/cover;">
+									</div>
+									<h4 style="font-size: 16px;"> Get <b>5</b> credit to consult with a  specialist</h4>
+									<h4 class="ref-link">when your referral link is visited</h4>
+									<div class="col-md-11 col-md-offset-2 referral-box">
+										<div class="referral-link">http://dgjkd.us/asdf</div>
+										<a href="#" class="btn copy-btn"><span>Copy</span></a>
+									</div>
+									<div class="col-md-11 col-md-offset-1 margin-bottom">
+										<span style="font-size: 18px;">Share on social media:</span>
+									</div>
+									<div class="row">
+										<div class="col-md-3 col-sm-3 col-xs-3">
+											<a href="#"><div class="social-media" style="padding-left: 10px;">
+												<i class="fa fa-envelope" aria-hidden="true"></i>
+											</div></a>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3">
+											<a href="#"><div class="social-media">
+												<i class="fa fa-facebook-square" aria-hidden="true"></i>
+											</div></a>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3">
+											<a href="#"><div class="social-media">
+												<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+											</div></a>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3">
+											<a href="#"><div class="social-media">
+												<i class="fa fa-twitter-square" aria-hidden="true"></i>
+											</div></a>
+										</div>
+									</div>
+								</div>   						
+							</div>						
+						</div>
+					</div>
+			   </div>
+			   <div class="col-md-4 col-sm-11 col-xs-11 settings-content">
+					<div class="card" style="margin-top: 15px;">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+							    <div class="bill-head-set">
+							    	<span><i class="fa fa-credit-card" aria-hidden="true"></i>Billing Settings</span>
+							    </div>
+								<div class="panel-group" id="accordion">
+								    <div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+									        Your Plan<span class="pull-right">Basic</span></a>
+									      </h4>
+									    </div>
+									    <div id="collapse1" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+								    </div>
+									<div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+									        Your Credit Card<span class="pull-right">None</span></a>
+									      </h4>
+									    </div>
+									    <div id="collapse2" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+									</div>
+								    <div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+									        Transaction History<i class="fa fa-caret-down pull-right" aria-hidden="true"></i></a>
+									      </h4>
+									    </div>
+									    <div id="collapse3" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+		                            </div>
+		                            <div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+									        Credit Balance<i class="fa fa-caret-down pull-right" aria-hidden="true"></i></a>
+									      </h4>
+									    </div>
+									    <div id="collapse4" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+		                            </div>
+	                            </div> 
+							</div>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+							    <div class="bill-head-set">
+							    	<span><i class="fa fa-user-circle" aria-hidden="true"></i>Account Settings</span>
+							    </div>
+								<div class="panel-group" id="accordion">
+								    <div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+									        Your Email<span class="pull-right">niyola59@gmail.com</span></a>
+									      </h4>
+									    </div>
+									    <div id="collapse1" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+								    </div>
+									<div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+									        Your Password<span class="pull-right">Change</span></a>
+									      </h4>
+									    </div>
+									    <div id="collapse2" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+									</div>
+								    <div class="panel panel-default">
+									    <div class="panel-heading">
+									      <h4 class="panel-title">
+									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+									        Display Language<span class="pull-right">English</span></a>
+									      </h4>
+									    </div>
+									    <div id="collapse3" class="panel-collapse collapse">
+									      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+									      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+									      commodo consequat.</div>
+									    </div>
+		                            </div>
+	                            </div> 
+							</div>
+						</div>
+					</div>
+			    </div>
 	  		   <div class="col-md-9 col-sm-9 col-xs-9 overlay-content">
 					<div class="row">
 					    <div class="col-md-10">
@@ -256,54 +422,54 @@
 										<span style="font-size:14px;font-weight: bold;color:#066d76;">Find doctor-created checklists<br>
 										&nbsp;&nbsp;&nbsp;&nbsp;Add to your profile<br>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feel good :)</span>
-										</div>   						
+										</div>  						
 									</div>						
 								</div>
 						</div>
-						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
-								<div class="row">
-									<div class="col-md-12">
-									<i class="fa fa-search" aria-hidden="true" id="font-awesome1"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#888888;">Find a goal(ex. Lose weight)</span>
-									</div>   						
-								</div>						
-							</div>
+						
+						<div class="content" style="margin-bottom: 20px;">
+							<div class="row">
+								<div class="col-md-12">
+								<input type="text" class="form-control ask-dr-search" placeholder="Find a goal(ex. Lose weight)"><span class="fa fa-search search-span" aria-hidden="true"></span>
+								</div>   						
+							</div>						
 						</div>
+						
 						<div class="card" style="margin-bottom: 0px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<i class="fa fa-hourglass-start" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Living Healthier</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 0px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<i class="fa fa-bed" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Parenting and Pregnancy</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 0px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<i class="fa fa-blind" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Growing Older</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 0px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<i class="fa fa-heart" aria-hidden="true" id="font-awesome"></i>  &nbsp;&nbsp;<span style="font-size:16px;color:#066d76;">Managing a condition</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 					</div>
 					<div class="col-md-5" style="margin-top:30px;">
@@ -317,52 +483,52 @@
 							</div>
 						</div>
 						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<span style="color:#066d76;font-size:16px;">Living with Seizures</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<span style="color:#066d76;font-size:16px;">Living Healthier</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<span style="color:#066d76;font-size:16px;">Parenting and Pregnancy</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<span style="color:#066d76;font-size:16px;">Growing Older</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 						<div class="card" style="margin-bottom: 20px;">
-							<div class="content">
+							<a href="#"><div class="content">
 								<div class="row">
 									<div class="col-md-12">
 									<span style="color:#066d76;font-size:16px;">Managing a condition</span>
 									</div>   						
 								</div>						
-							</div>
+							</div></a>
 						</div>
 					</div>
-			   </div>
+			   </div> 
 	  		</div>
 	  	</div>
 	  </div>

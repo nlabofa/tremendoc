@@ -3,9 +3,23 @@
 body{
   background: rgba(203, 203, 210, 0.15);
   //overflow:hidden;
+  
 }
+
 a{
     text-decoration:none!important;
+}
+.ask-spec-dr{
+    border: 3px solid #f2f2f2;
+    transition-duration: .55s;
+}
+.ask-spec-dr .card{
+    margin-top:30px;
+}
+.ask-spec-dr:hover{
+  background-color: white;
+  transition-duration: .55s;
+  padding: 10px 19px;
 }
 .get-help{
     text-align: center;background-color:#e8fbf8;
@@ -77,6 +91,13 @@ margin-bottom: 20px;
  .chat-format{
     margin-top: 150px;margin-bottom: 15px;
  }
+ .chat-format div{
+    transition-duration: 0.55s;
+ }
+ .chat-format div:hover{
+    transition-duration: 0.55s;
+    padding: 10px 19px;
+ }
  .vid-chat{
     border-right: 3px solid #f2f2f2
  }
@@ -125,8 +146,6 @@ p {
   line-height: 1.5;
 }
 
-
-body,
 .wrapper {
   min-height: 100vh;
   position: relative;
@@ -137,12 +156,6 @@ body,
   top: 0;
   height: 100vh;
   }
-  .sidebar,
-.main-panel {
-  overflow: auto;
-  max-height: 100%;
-  height: 100%;
-}
   .sidebar {
   position: fixed;
   top: 0;
@@ -203,7 +216,7 @@ body,
 #font-awesome1{
   color:#888888;
 }
-.answer-content, .billing-content, .profile-content{
+.answer-content, .billing-content, .profile-content, .invite-content, .settings-content{
   background-color:#009ca9;
   margin-top:-25px;
   margin-left:-9px;
@@ -212,7 +225,18 @@ body,
 .answer-content{
     height:850px;
 }
-
+.modal-header{
+    height: 180px;margin-top: 10px;border-radius: 5px 5px 0 0;
+}
+.ref-link{
+    padding-bottom: 15px;font-size: 16px;line-height: 0px;text-align: center;
+}
+.copy-btn{
+    position: absolute;right: 0px;top:-1px;border-radius: 0 5px 5px 0;display: inline-block;height:43px;padding:10px;text-align: center;text-transform: none;background-color:#009ca9;width:80px;
+}
+.copy-btn span{
+    color: black;font-size: 22px;line-height: 0px;
+}
 .border-bottom{
   border-bottom:1px solid #e2e2e2;
   margin-top:5px;
@@ -324,7 +348,7 @@ textarea{
   margin-left:100px;
   margin-bottom:-150px;
 }
-.answer-redirect{
+.answer-redirect, .invite-redirect{
     padding:0px;
     margin-top: -38px;
     font-size:18px;
@@ -368,12 +392,6 @@ textarea{
     border:2px solid #333;font-size: 17px;border-radius: 4px;
     margin-left:40px;
 }
-.ask-spec-dr{
-    border: 3px solid #f2f2f2
-}
-.ask-spec-dr .card{
-    margin-top:30px;
-}
 .no-box-shadow{
     box-shadow:unset;
 }
@@ -384,6 +402,46 @@ textarea{
     position: relative;
     z-index: 2;
     color: #009ca9;
+}
+.referral-box{
+    position:relative;
+    border: 1px solid #e2e2e2;
+    height:43px;
+    margin:0 15px 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-size:14px;
+}
+.referral-link{
+    display:inline-block;
+    line-height:43px;
+    font-weight:300;
+}
+.social-media i{
+    color: #009ca9;
+    font-size:40px;
+}
+.bill-head-set{
+    margin-top: 5px;
+    //margin-bottom:5px;
+    padding: 10px 15px;
+    border:2px solid #f2f2f2;
+}
+.bill-head-set i{
+    font-size:24px;
+    padding-right: 15px;
+}
+.bill-head-set span{
+    font-size:19px;
+}
+.panel-title i{
+    margin-top:7px;
+}
+.panel-title span{
+    color: #009ca9;
+}
+.panel-title{
+    font-size:17px;
 }
 
 
@@ -405,7 +463,7 @@ textarea{
     margin-left:50px;
     margin-top:0px;
   }
-  .profile-content, .answer-content, .billing-content{
+  .profile-content, .answer-content, .billing-content, .invite-content, .settings-content{
     background-color: inherit;
     margin-left:50px;
   }
@@ -415,7 +473,7 @@ textarea{
     margin-left:30px;
     margin-top:0px;
   }
-  .profile-content, .answer-content, .billing-content{
+  .profile-content, .answer-content, .billing-content, .invite-content, .settings-content{
     background-color: inherit;
     margin-left:20px;
   }
