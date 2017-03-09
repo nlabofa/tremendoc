@@ -39,100 +39,95 @@ $(".sidebar").hover(function() {
 
 $(function() {
     $('#btn-profile').click(function() {
-        $(".answer-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .billing-content, .invite-content, .settings-content").hide();
         if ($(".profile-content").is(":hidden")) {
-            $('.overlay-content').foggy({
+            $('.ask-dr').foggy({
                 opacity: 1.5,
             });
             $(".profile-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
-            $('.overlay-content').css('pointer-events', 'none');
-        } else {
-            $('.overlay-content').css('filter', 'unset').show();
-            $('.overlay-content').css('pointer-events', 'unset');
+            $(".ask-dr").show();
+            $('.ask-dr').css('pointer-events', 'none');
+        } 
+        else {
+            $('.ask-dr').css('filter', 'unset').show();
             $(".profile-content").hide();
-            $(".fake-width").show();
+            $('.ask-dr').css('pointer-events', 'unset');
         }
-
     });
 
     $('#btn-answer').click(function() {
-        $(".profile-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .invite-content, .settings-content").hide();
         if ($(".answer-content").is(":hidden")) {
-            $('.overlay-content').foggy({
+            $('.ask-dr').foggy({
                 opacity: 1.5,
             });
             $(".answer-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
-            $('.overlay-content').css('pointer-events', 'none');
+            $(".ask-dr").show();
+            $('.ask-dr').css('pointer-events', 'none');
         } else {
-            $('.overlay-content').css('filter', 'unset').show();
-            $('.overlay-content').css('pointer-events', 'unset');
+            $('.ask-dr').css('filter', 'unset').show();
             $(".answer-content").hide();
-            $(".fake-width").show();
+            $('.ask-dr').css('pointer-events', 'unset');
         }
 
     });
 
     $('#btn-billing').click(function() {
-        $(".answer-content, .profile-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .profile-content, .invite-content, .settings-content").hide();
         if ($(".billing-content").is(":hidden")) {
-            $('.overlay-content').foggy({
+            $('.ask-dr').foggy({
                 opacity: 1.5,
             });
             $(".billing-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
-            $('.overlay-content').css('pointer-events', 'none');
+            $(".ask-dr").show();
+            $('.ask-dr').css('pointer-events', 'none');
         } else {
-            $('.overlay-content').css('filter', 'unset').show();
-            $('.overlay-content').css('pointer-events', 'unset');
+            $('.ask-dr').css('filter', 'unset').show();
             $(".billing-content").hide();
-            $(".fake-width").show();
+            $('.ask-dr').css('pointer-events', 'unset');
         }
 
     });
 
     $('#btn-invite').click(function() {
-        $(".profile-content, .billing-content, .answer-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .answer-content, .settings-content").hide();
         if ($(".invite-content").is(":hidden")) {
-            $('.overlay-content').foggy({
+            $('.ask-dr').foggy({
                 opacity: 1.5,
             });
             $(".invite-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
-            $('.overlay-content').css('pointer-events', 'none');
+            $(".ask-dr").show();
+            $('.ask-dr').css('pointer-events', 'none');
         } else {
-            $('.overlay-content').css('filter', 'unset').show();
-            $('.overlay-content').css('pointer-events', 'unset');
+            $('.ask-dr').css('filter', 'unset').show();
             $(".invite-content").hide();
-            $(".fake-width").show();
+            $('.ask-dr').css('pointer-events', 'unset');
         }
 
     });
     $('#btn-settings').click(function() {
-        $(".profile-content, .billing-content, .answer-content, .invite-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .answer-content, .invite-content").hide();
         if ($(".settings-content").is(":hidden")) {
-            $('.overlay-content').foggy({
+            $('.ask-dr').foggy({
                 opacity: 1.5,
             });
             $(".settings-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
-            $('.overlay-content').css('pointer-events', 'none');
+            $(".ask-dr").show();
+            $('.ask-dr').css('pointer-events', 'none');
         } else {
-            $('.overlay-content').css('filter', 'unset').show();
-            $('.overlay-content').css('pointer-events', 'unset');
+            $('.ask-dr').css('filter', 'unset').show();
             $(".settings-content").hide();
-            $(".fake-width").show();
+            $('.ask-dr').css('pointer-events', 'unset');
         }
 
     });
