@@ -7,7 +7,7 @@ $('#date-picker').datepicker();
 
 $(".sidebar").css("width", "100");
 $(".answer-content, .billing-content, .profile-content, .invite-content, .hide-content, .settings-content").hide();
-$(".ask-dr-main, .chat-content, .panel-bill-plan-daily, .panel-bill-plan-monthly, .panel-bill-plan-yearly").hide();
+$(".ask-dr-main, .chat-content, .panel-bill-plan-daily, .panel-bill-plan-monthly, .panel-bill-plan-yearly,.subscribe-bill-plan-daily, .subscribe-bill-plan-monthly, .subscribe-bill-plan-yearly").hide();
 
 
 /*transitions for the sidebar hover */
@@ -40,96 +40,173 @@ $(".sidebar").hover(function() {
 $(function() {
     $('#btn-profile').click(function() {
         $(".answer-content, .billing-content, .invite-content, .settings-content").hide();
-        if ($(".profile-content").is(":hidden")) {
-            $('.ask-dr').foggy({
+        if ($(".profile-content").is(":hidden") && $(".ask-dr-main").is(":hidden")) {
+            $('.ask-dr, .chat-content').foggy({
                 opacity: 1.5,
             });
             $(".profile-content").animate({
                 'width': 'toggle'
             });
-            $(".ask-dr").show();
-            $('.ask-dr').css('pointer-events', 'none');
+            
+            $('.ask-dr, .chat-content').css('pointer-events', 'none');
         } 
+        else if ($(".profile-content").is(":hidden") && $(".ask-dr-main").is(":visible")) {
+            $('.ask-dr-main').foggy({
+                opacity: 1.5,
+            });
+            $(".profile-content").animate({
+                'width': 'toggle'
+            });
+            $('.ask-dr-main').css('pointer-events', 'none');
+        } 
+        else if ($(".profile-content").is(":hidden")&& $(".choose-plan,.add-card").is(":visible")) {
+            $('.choose-plan, .add-card').foggy({
+                opacity: 1.5,
+            });
+            $(".profile-content").animate({
+                'width': 'toggle'
+            });
+            $(' .choose-plan, .add-card').css('pointer-events', 'none');
+        }
         else {
-            $('.ask-dr').css('filter', 'unset').show();
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('filter', 'unset');
             $(".profile-content").hide();
-            $('.ask-dr').css('pointer-events', 'unset');
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('pointer-events', 'unset');
         }
     });
 
     $('#btn-answer').click(function() {
         $(".profile-content, .billing-content, .invite-content, .settings-content").hide();
-        if ($(".answer-content").is(":hidden")) {
-            $('.ask-dr').foggy({
+        if ($(".answer-content").is(":hidden") && $(".ask-dr-main").is(":hidden")) {
+            $('.ask-dr, .chat-content').foggy({
                 opacity: 1.5,
             });
             $(".answer-content").animate({
                 'width': 'toggle'
             });
-            $(".ask-dr").show();
-            $('.ask-dr').css('pointer-events', 'none');
-        } else {
-            $('.ask-dr').css('filter', 'unset').show();
-            $(".answer-content").hide();
-            $('.ask-dr').css('pointer-events', 'unset');
-        }
 
+            $('.ask-dr, .chat-content').css('pointer-events', 'none');
+        }
+        else if ($(".answer-content").is(":hidden") && $(".ask-dr-main").is(":visible")) {
+            $('.ask-dr-main').foggy({
+                opacity: 1.5,
+            });
+            $(".answer-content").animate({
+                'width': 'toggle'
+            });
+            $('.ask-dr-main').css('pointer-events', 'none');
+        }  
+        else if ($(".answer-content").is(":hidden")&& $(".choose-plan,.add-card").is(":visible")){
+            $('.choose-plan, .add-card').foggy({
+                opacity: 1.5,
+            });
+            $(".answer-content").animate({
+                'width': 'toggle'
+            });
+            $(' .choose-plan, .add-card').css('pointer-events', 'none');
+        }
+        else {
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('filter', 'unset');
+            $(".answer-content").hide();
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('pointer-events', 'unset');
+        }
     });
 
     $('#btn-billing').click(function() {
         $(".answer-content, .profile-content, .invite-content, .settings-content").hide();
-        if ($(".billing-content").is(":hidden")) {
-            $('.ask-dr').foggy({
+        if ($(".billing-content").is(":hidden") && $(".ask-dr-main").is(":hidden")) {
+            $('.ask-dr, .chat-content').foggy({
                 opacity: 1.5,
             });
             $(".billing-content").animate({
                 'width': 'toggle'
             });
-            $(".ask-dr").show();
-            $('.ask-dr').css('pointer-events', 'none');
-        } else {
-            $('.ask-dr').css('filter', 'unset').show();
-            $(".billing-content").hide();
-            $('.ask-dr').css('pointer-events', 'unset');
+            $('.ask-dr, .chat-content').css('pointer-events', 'none');
         }
-
+        else if ($(".billing-content").is(":hidden") && $(".ask-dr-main").is(":visible")) {
+            $('.ask-dr-main').foggy({
+                opacity: 1.5,
+            });
+            $(".billing-content").animate({
+                'width': 'toggle'
+            });
+            $('.ask-dr-main').css('pointer-events', 'none');
+        }  
+         else if ($(".billing-content").is(":hidden")&& $(".choose-plan,.add-card").is(":visible")) {
+            $('.choose-plan, .add-card').foggy({
+                opacity: 1.5,
+            });
+            $(".billing-content").animate({
+                'width': 'toggle'
+            });
+            $(' .choose-plan, .add-card').css('pointer-events', 'none');
+        }
+        else {
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('filter', 'unset');
+            $(".billing-content").hide();
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('pointer-events', 'unset');
+        }
     });
-
     $('#btn-invite').click(function() {
         $(".profile-content, .billing-content, .answer-content, .settings-content").hide();
-        if ($(".invite-content").is(":hidden")) {
-            $('.ask-dr').foggy({
+        if ($(".invite-content").is(":hidden")&& $(".ask-dr-main").is(":hidden")) {
+            $('.ask-dr, .chat-content').foggy({
                 opacity: 1.5,
             });
             $(".invite-content").animate({
                 'width': 'toggle'
             });
-            $(".ask-dr").show();
-            $('.ask-dr').css('pointer-events', 'none');
-        } else {
-            $('.ask-dr').css('filter', 'unset').show();
-            $(".invite-content").hide();
-            $('.ask-dr').css('pointer-events', 'unset');
+            $('.ask-dr, .chat-content').css('pointer-events', 'none');
         }
-
+        else if ($(".invite-content").is(":hidden") && $(".ask-dr-main").is(":visible")) {
+            $('.ask-dr-main').foggy({
+                opacity: 1.5,
+            });
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+            $('.ask-dr-main').css('pointer-events', 'none');
+        }  
+        else if ($(".invite-content").is(":hidden")&& $(".choose-plan,.add-card").is(":visible")) {
+            $('.choose-plan, .add-card').foggy({
+                opacity: 1.5,
+            });
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+            $(' .choose-plan, .add-card').css('pointer-events', 'none');
+        }
+        else {
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('filter', 'unset');
+            $(".invite-content").hide();
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('pointer-events', 'unset');
+        }
     });
     $('#btn-settings').click(function() {
         $(".profile-content, .billing-content, .answer-content, .invite-content").hide();
-        if ($(".settings-content").is(":hidden")) {
-            $('.ask-dr').foggy({
+        if ($(".settings-content").is(":hidden")&& $(".ask-dr-main").is(":hidden")) {
+            $('.ask-dr, .chat-content').foggy({
                 opacity: 1.5,
             });
             $(".settings-content").animate({
                 'width': 'toggle'
             });
-            $(".ask-dr").show();
-            $('.ask-dr').css('pointer-events', 'none');
-        } else {
-            $('.ask-dr').css('filter', 'unset').show();
-            $(".settings-content").hide();
-            $('.ask-dr').css('pointer-events', 'unset');
+            $('.ask-dr, .chat-content').css('pointer-events', 'none');
+        } 
+        else if ($(".settings-content").is(":hidden")&& $(".choose-plan,.add-card").is(":visible")) {
+            $('.choose-plan, .add-card').foggy({
+                opacity: 1.5,
+            });
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+            $(' .choose-plan, .add-card').css('pointer-events', 'none');
         }
-
+        else {
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('filter', 'unset');
+            $(".settings-content").hide();
+            $('.ask-dr, .ask-dr-main, .chat-content,.choose-plan, .add-card').css('pointer-events', 'unset');
+        }
     });
 
 });
@@ -140,76 +217,210 @@ $(function() {
 $(function() {
     $('#btn-mobile-profile').click(function() {
         $(".answer-content, .billing-content, .invite-content, .settings-content").hide();
-        if ($(".profile-content").is(":hidden")) {
-            $(".overlay-content").hide();
-
+        if ($(".profile-content").is(":hidden")&& $(".ask-dr").is(":visible")) {
+            $(".ask-dr").hide();
+            $(".profile-content").animate({
+                'width': 'toggle'
+            });
+        }
+        else if ($(".profile-content").is(":hidden")&& $(".ask-dr").is(":hidden")){
+            $(".ask-dr-main, .chat-content").hide();
+          
 
             $(".profile-content").animate({
                 'width': 'toggle'
             });
-        } else {
+
+        }
+        else if ($(".profile-content").is(":hidden")&& $(".choose-plan").is(":visible")){
+            $(".choose-plan").hide();
+          
+
+            $(".profile-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".profile-content").is(":hidden")&& $(".add-card").is(":visible")){
+            $(".add-card").hide();
+          
+
+            $(".profile-content").animate({
+                'width': 'toggle'
+            });
+
+        }
+         else {
             $(".profile-content").hide();
-            $(".overlay-content").fadeIn();
+            $(".ask-dr, .choose-plan, .add-card").fadeIn();
         }
 
     });
 
     $('#btn-mobile-answers').click(function() {
         $(".profile-content, .billing-content, .invite-content, .settings-content").hide();
-        if ($(".answer-content").is(":hidden")) {
-            $(".overlay-content").hide();
+        if ($(".answer-content").is(":hidden")&& $(".ask-dr").is(":visible")) {
+            $(".ask-dr").hide();
 
             $(".answer-content").animate({
                 'width': 'toggle'
             });
-        } else {
+        }
+         else if ($(".answer-content").is(":hidden")&& $(".ask-dr").is(":hidden")){
+            $(".ask-dr-main, .chat-content").hide();
+          
+
+            $(".answer-content").animate({
+                'width': 'toggle'
+            });
+        } 
+        else if ($(".answer-content").is(":hidden")&& $(".choose-plan").is(":visible")){
+            $(".choose-plan").hide();
+          
+            $(".answer-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".answer-content").is(":hidden")&& $(".add-card").is(":visible")){
+            $(".add-card").hide();
+          
+
+            $(".answer-content").animate({
+                'width': 'toggle'
+            });
+
+        }
+         else {
             $(".answer-content").hide();
-            $(".overlay-content").fadeIn();
+            $(".ask-dr, .choose-plan, .add-card").fadeIn();
         }
 
     });
 
     $('#btn-mobile-billing').click(function() {
         $(".profile-content, .answer-content, .invite-content, .settings-content").hide();
-        if ($(".billing-content").is(":hidden")) {
-            $(".overlay-content").hide();
+        if ($(".billing-content").is(":hidden")&& $(".ask-dr").is(":visible")) {
+            $(".ask-dr").hide();
 
             $(".billing-content").animate({
                 'width': 'toggle'
             });
-        } else {
+        } 
+         else if ($(".billing-content").is(":hidden")&& $(".ask-dr").is(":hidden")){
+            $(".ask-dr-main, .chat-content").hide();
+
+            $(".billing-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".billing-content").is(":hidden")&& $(".choose-plan").is(":visible")){
+            $(".choose-plan").hide();
+
+            $(".billing-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".billing-content").is(":hidden")&& $(".add-card").is(":visible")){
+            $(".add-card").hide();
+          
+
+            $(".billing-content").animate({
+                'width': 'toggle'
+            });
+
+        }
+        else {
             $(".billing-content").hide();
-            $(".overlay-content").fadeIn();
+            $(".ask-dr, .choose-plan, .add-card").fadeIn();
         }
 
     });
 
     $('#btn-mobile-invite').click(function() {
         $(".profile-content, .answer-content, .billing-content, .settings-content").hide();
-        if ($(".invite-content").is(":hidden")) {
-            $(".overlay-content").hide();
+        if ($(".invite-content").is(":hidden")&& $(".ask-dr").is(":visible")) {
+            $(".ask-dr").hide();
 
             $(".invite-content").animate({
                 'width': 'toggle'
             });
-        } else {
+        } 
+         else if ($(".invite-content").is(":hidden")&& $(".ask-dr").is(":hidden")){
+            $(".ask-dr-main, .chat-content").hide();
+          
+
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".invite-content").is(":hidden")&& $(".choose-plan").is(":visible")){
+            $(".choose-plan").hide();
+          
+
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".invite-content").is(":hidden")&& $(".add-card").is(":visible")){
+            $(".add-card").hide();
+          
+
+            $(".invite-content").animate({
+                'width': 'toggle'
+            });
+
+        }
+        else {
             $(".invite-content").hide();
-            $(".overlay-content").fadeIn();
+            $(".ask-dr, .choose-plan, .add-card").fadeIn();
         }
 
     });
 
     $('#btn-mobile-settings').click(function() {
         $(".profile-content, .answer-content, .billing-content, .invite-content").hide();
-        if ($(".settings-content").is(":hidden")) {
-            $(".overlay-content").hide();
+        if ($(".settings-content").is(":hidden")&& $(".ask-dr").is(":visible")) {
+            $(".ask-dr").hide();
 
             $(".settings-content").animate({
                 'width': 'toggle'
             });
-        } else {
+        }
+         else if ($(".settings-content").is(":hidden")&& $(".ask-dr").is(":hidden")){
+            $(".ask-dr-main, .chat-content").hide();
+          
+
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".settings-content").is(":hidden")&& $(".choose-plan").is(":visible")){
+            $(".choose-plan").hide();
+          
+
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+
+        } 
+        else if ($(".settings-content").is(":hidden")&& $(".add-card").is(":visible")){
+            $(".add-card").hide();
+          
+
+            $(".settings-content").animate({
+                'width': 'toggle'
+            });
+
+        }
+         else {
             $(".settings-content").hide();
-            $(".overlay-content").fadeIn();
+            $(".ask-dr, .choose-plan, .add-card").fadeIn();
         }
 
     });
@@ -217,19 +428,32 @@ $(function() {
 });
 
 $('#daily-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-monthly, .panel-bill-plan-yearly").hide();
         $(".panel-bill-plan-daily").fadeIn();
 
     });
 $('#monthly-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-daily, .panel-bill-plan-yearly").hide();
         $(".panel-bill-plan-monthly").fadeIn();
 
     });
 $('#yearly-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-monthly, .panel-bill-plan-daily").hide();
         $(".panel-bill-plan-yearly").fadeIn();
 
+    });
+
+$('#daily-plan').click(function() {
+        $(".subscribe-bill-plan-monthly, .subscribe-bill-plan-yearly").hide();
+        $(".subscribe-bill-plan-daily").fadeIn();
+    });
+$('#monthly-plan').click(function() {
+        $(".subscribe-bill-plan-daily, .subscribe-bill-plan-yearly").hide();
+        $(".subscribe-bill-plan-monthly").fadeIn();
+    });
+$('#yearly-plan').click(function() {
+        $(".subscribe-bill-plan-monthly, .subscribe-bill-plan-daily").hide();
+        $(".subscribe-bill-plan-yearly").fadeIn();
     });
 
 /* browser resize and mobile responsiveness */
@@ -239,11 +463,14 @@ $(window).on('resize', function(event) {
     //when a user on a mobile view clicks on a link and resizes to web view, we want to hide the mobile view and switch to web view
     if (windowSize > 960 && $(".profile-content, .answer-content, .billing-content, .invite-content, .settings-content").is(":visible")) {
         $(".profile-content, .answer-content, .billing-content, .invite-content, .settings-content").hide();
-        $(".overlay-content").css('filter', 'unset').fadeIn();
+        $(".ask-dr").css('filter', 'unset').fadeIn();
     }
     //when a user on a web view clicks on a link and resizes to mobile view. we want to hide the overlay-content and switch to mobile view.
-    else if (windowSize < 960 && $(".profile-content,.answer-content,.billing-content, .invite-content, .settings-content").is(":visible") && $(".overlay-content").is(":visible")) {
-        $(".overlay-content").hide();
+    else if (windowSize < 960 && $(".profile-content,.answer-content,.billing-content, .invite-content, .settings-content").is(":visible") && $(".ask-dr").is(":visible")) {
+        $(".ask-dr").hide();
+    }
+    else if (windowSize < 960 && $(".profile-content,.answer-content,.billing-content, .invite-content, .settings-content").is(":visible") && $(".ask-dr-main").is(":visible")) {
+        $(".ask-dr-main").hide();
     } else {
 
     }
@@ -256,6 +483,7 @@ $("#speak-dr").click(function() {
     $(".ask-dr-main").fadeIn();
 });
 $("#dr-chat").click(function() {
+    //$(".navbar").hide();
     $(".ask-dr-main").fadeOut();
     $(".chat-content").fadeIn();
 });

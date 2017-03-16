@@ -39,7 +39,7 @@ $(".sidebar").hover(function() {
 
 $(function() {
     $('#btn-profile').click(function() {
-        $(".answer-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .billing-content, .invite-content, .settings-content, .fake-width").hide();
         if ($(".profile-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -47,7 +47,6 @@ $(function() {
             $(".profile-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
             $('.overlay-content').css('pointer-events', 'none');
         } else {
             $('.overlay-content').css('filter', 'unset').show();
@@ -59,7 +58,7 @@ $(function() {
     });
 
     $('#btn-answer').click(function() {
-        $(".profile-content, .billing-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .invite-content, .settings-content, .fake-width").hide();
         if ($(".answer-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -67,7 +66,6 @@ $(function() {
             $(".answer-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
             $('.overlay-content').css('pointer-events', 'none');
         } else {
             $('.overlay-content').css('filter', 'unset').show();
@@ -79,7 +77,7 @@ $(function() {
     });
 
     $('#btn-billing').click(function() {
-        $(".answer-content, .profile-content, .invite-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".answer-content, .profile-content, .invite-content, .settings-content, .fake-width").hide();
         if ($(".billing-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -87,7 +85,6 @@ $(function() {
             $(".billing-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
             $('.overlay-content').css('pointer-events', 'none');
         } else {
             $('.overlay-content').css('filter', 'unset').show();
@@ -99,7 +96,7 @@ $(function() {
     });
 
     $('#btn-invite').click(function() {
-        $(".profile-content, .billing-content, .answer-content, .settings-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .answer-content, .settings-content, .fake-width").hide();
         if ($(".invite-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -107,7 +104,6 @@ $(function() {
             $(".invite-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
             $('.overlay-content').css('pointer-events', 'none');
         } else {
             $('.overlay-content').css('filter', 'unset').show();
@@ -118,7 +114,7 @@ $(function() {
 
     });
     $('#btn-settings').click(function() {
-        $(".profile-content, .billing-content, .answer-content, .invite-content, .fake-width, .overlay-content").hide();
+        $(".profile-content, .billing-content, .answer-content, .invite-content, .fake-width").hide();
         if ($(".settings-content").is(":hidden")) {
             $('.overlay-content').foggy({
                 opacity: 1.5,
@@ -126,7 +122,6 @@ $(function() {
             $(".settings-content").animate({
                 'width': 'toggle'
             });
-            $(".overlay-content").show();
             $('.overlay-content').css('pointer-events', 'none');
         } else {
             $('.overlay-content').css('filter', 'unset').show();
@@ -222,19 +217,16 @@ $(function() {
 });
 
 $('#daily-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-monthly, .panel-bill-plan-yearly").hide();
         $(".panel-bill-plan-daily").fadeIn();
-
     });
 $('#monthly-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-daily, .panel-bill-plan-yearly").hide();
         $(".panel-bill-plan-monthly").fadeIn();
-
     });
 $('#yearly-preview').click(function() {
-        $(".panel-bill-plan").fadeOut();
+        $(".panel-bill-plan-monthly, .panel-bill-plan-daily").hide();
         $(".panel-bill-plan-yearly").fadeIn();
-
     });
 
 /* browser resize and mobile responsiveness */
@@ -255,15 +247,6 @@ $(window).on('resize', function(event) {
 });
 
 /* answers page transitions */
-
-$("#speak-dr").click(function() {
-    $(".ask-dr").fadeOut();
-    $(".ask-dr-main").fadeIn();
-});
-$("#dr-chat").click(function() {
-    $(".ask-dr-main").fadeOut();
-    $(".chat-content").fadeIn();
-});
 
 
 /* setting the active class on the sidebar depending on the link clicked */

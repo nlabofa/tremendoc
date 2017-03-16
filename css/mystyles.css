@@ -33,7 +33,7 @@ background-color: #009ca9;
  z-index:-1;
  position:absolute;
  }
- .ask-dr, .ask-dr-main,.chat-content{
+ .ask-dr, .ask-dr-main,.chat-content, .choose-plan, .add-card{
  z-index:-1;
  position:absolute;    
  }
@@ -92,8 +92,9 @@ margin-bottom: 20px;
  .dr-main-content span{
     font-size: 19px;color:#faa500;
  }
- .chat-format{
-    margin-top: 150px;margin-bottom: 15px;
+ .bio{
+    margin-top:20px;
+    margin-bottom:40px;
  }
  .chat-format div{
     transition-duration: 0.55s;
@@ -226,20 +227,17 @@ p {
   margin-left:-9px;
   height:auto;
 }
-.answer-content{
-    height:850px;
-}
 .modal-header{
     height: 180px;margin-top: 10px;border-radius: 5px 5px 0 0;
 }
 .ref-link{
-    padding-bottom: 15px;font-size: 16px;line-height: 0px;text-align: center;
+    padding-bottom: 15px;font-size: 16px;
 }
 .copy-btn{
     position: absolute;right: 0px;top:0px;display: inline-block;height:40px;padding:10px;text-align: center;text-transform: none;background-color:#009ca9;
 }
 .copy-btn span{
-    color: black;font-size: 22px;line-height: 0px;
+    color: black;font-size: 18px;line-height: 0px;
 }
 .no-padding{
     padding:0px;
@@ -277,6 +275,7 @@ textarea{
 }
 .navbar .collapse ul{
   background-color:#009ca9;
+  margin-right:-30px;
  }
  .navbar .collapse li > a{
  color: #FFFFFF;
@@ -367,7 +366,7 @@ textarea{
     margin-left:40%;
     padding-top: 10px;
 }
-.ask-dr{
+.ask-dr, .choose-plan, .add-card{
     margin-top: 50px;
 }
 .ask-dr-main{
@@ -506,17 +505,29 @@ textarea{
     margin-top:0px;
   }
   .profile-content, .answer-content, .billing-content, .invite-content, .settings-content{
-    background-color: inherit;
-    margin-left:50px;
+    margin-left:6%;
+    margin-top:10px;
   }
 }
 @media (max-width: 500px) {
     .overlay-content{
-    margin-left:30px;
+    margin-left:0px;
     margin-top:0px;
   }
   .profile-content, .answer-content, .billing-content, .invite-content, .settings-content{
-    background-color: inherit;
-    margin-left:20px;
+    margin-left:10px;
+    margin-top: 10px;
   }
     }
+    @media (max-width: 320px){
+    .email span{
+    display:none;
+  }
+    }
+    
+@media only screen and (max-width: 760px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 93%;
+    }
+}
